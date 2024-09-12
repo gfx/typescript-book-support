@@ -1,0 +1,17 @@
+// https://reactjs.org/docs/hooks-intro.html より引用
+// コメントは筆者による
+
+import React, { useState } from "react";
+
+function Example() {
+  const [count, setCount] = useState(0);
+  //    ^^^^^^^^^^^^^^^^^ useState()の戻り値は、値と関数のタプルになっています
+  // なお、タプルを受け取るこの構文は「分割代入」で、本章のあとの節で取り上げます
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
