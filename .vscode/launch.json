@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // name - VS Codeの "Run and Debug" ペインで表示される名前
+      // 最初の8文字くらいしか表示されないので識別可能にします
+      "name": "TypeScript File",
+      // type - デバッガの種類
+      "type": "node",
+      // sourceMaps - デバッガがソースマップを使うかどうか
+      "sourceMaps": true,
+      // request - 新規にプロセスを開始する"launch"または既存のプロセスへの"attach"
+      "request": "launch",
+      // internalConsoleOptions - 実行時にデバッグコンソールを開きたいなら要設定
+      "internalConsoleOptions": "openOnSessionStart",
+      // cwd - 実行時のカレントディレクトリ
+      "cwd": "${workspaceFolder}",
+      // env - 環境変数
+      "env": {
+        "NODE_ENV": "development",
+      },
+      // runtimeExecutable - 処理系にパスが通っている場合はコマンド名、そうでなければ絶対パス
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/tsimp",
+      // runtimeArgs - 処理系へのオプション
+      "runtimeArgs": [
+        "${relativeFile}",
+      ],
+    },
+  ]
+}
